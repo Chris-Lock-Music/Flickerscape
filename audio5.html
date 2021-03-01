@@ -1,0 +1,43 @@
+<!doctype html>
+
+<head>
+
+<title>audio5</title>
+
+<link rel="stylesheet" href="/Style.css" type="text/css" media="screen" />
+
+</head>
+    <body>
+        <script>
+    var audioContext = new AudioContext();
+
+    var filter = audioContext.createBiquadFilter();
+    var oscillator = audioContext.createOscillator();
+    var volume = audioContext.createGain();
+
+
+    oscillator.type = "square";
+    oscillator.frequency.setValueAtTime(105, audioContext.currentTime);
+
+
+    filter.type = "lowpass";
+    filter.frequency.setTargetAtTime(105, audioContext.currentTime, 1);
+
+    volume.gain.setValueAtTime(0, audioContext.currentTime);
+    volume.gain.linearRampToValueAtTime(0.2, 1, audioContext.currentTime);
+    volume.gain.linearRampToValueAtTime(0.2, 5, audioContext.currentTime);
+    volume.gain.linearRampToValueAtTime(0, 7, audioContext.currentTime);
+    volume.gain.linearRampToValueAtTime(0.2, 8, audioContext.currentTime);
+    volume.gain.linearRampToValueAtTime(0, 9, audioContext.currentTime);
+
+
+    oscillator.connect(filter);
+    oscillator.connect(volume);
+    filter.connect(audioContext.destination);
+    volume.connect(audioContext.destination);
+
+    oscillator.start(audioContext.currentTime);
+
+        </script>
+    </body>
+</html>

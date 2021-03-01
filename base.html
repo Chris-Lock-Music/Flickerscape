@@ -1,0 +1,84 @@
+<!--FlickerScape 1.0-->
+<!--By Christopher Lock-->
+<!--Lock-music.com-->
+<!--Nov / 17 / 2020-->
+
+<!--ASCII art generated at https://patorjk.com/software/taag/#p=display&f=Colossal&t=CHRIS%20LOCK-->
+<!--_________ .__          .__         .____                  __    -->
+<!--\_   ___ \|  |_________|__| ______ |    |    ____   ____ |  | __-->
+<!--/    \  \/|  |  \_  __ \  |/  ___/ |    |   /  _ \_/ ___\|  |/ /-->
+<!--\     \___|   Y  \  | \/  |\___ \  |    |__(  <_> )  \___|    < -->
+<!-- \______  /___|  /__|  |__/____  > |_______ \____/ \___  >__|_ \-->
+<!--        \/     \/              \/          \/          \/     \/-->
+
+
+<!doctype html>
+
+<head>
+
+<title>FLICKERSCAPE</title>
+
+<link rel="stylesheet" href="/Style.css" type="text/css" media="screen" />
+</head>
+<style>
+
+.fullscreen {
+    border: none;
+    height: 1000px;
+    width: 1700px;
+  }
+
+</style>
+
+  <body>
+
+<!--an iframe which is populated by the scenes of the piece-->
+<iframe class="fullscreen" src="test_css.3.html"></iframe>
+
+<!--the base drone of the piece-->
+<audio autoplay>
+  <source src="basetest.wav" type="audio/wav">
+</audio>
+
+<!--the base soundscape of the piece-->
+<audio autoplay>
+  <source src="base2.wav" type="audio/wav">
+</audio>
+
+<!--additional base material synthesized using the Web Audio API-->
+<script>
+
+    var audioCtx = new (window.AudioContext || window.webkitAudioContext)
+
+
+    var volume = audioCtx.createGain();
+    volume.gain.setValueAtTime(0, audioCtx.currentTime);
+    volume.gain.linearRampToValueAtTime(0.05, 2, audioCtx.currentTime);
+    volume.connect(audioCtx.destination);
+
+
+    var sinea = audioCtx.createOscillator();
+    sinea.frequency.value = 100;
+    sinea.frequency.linearRampToValueAtTime(300, 20, audioCtx.currentTime);
+    sinea.detune.setValueAtTime(0, audioCtx.currentTime);
+    sinea.detune.linearRampToValueAtTime(-2000, 20, audioCtx.currentTime);
+    sinea.type = "square";
+    sinea.connect(volume);
+    sinea.start();
+
+    var sineb = audioCtx.createOscillator();
+    sineb.frequency.value = 100;
+    sineb.frequency.linearRampToValueAtTime(300, 21, audioCtx.currentTime);
+    sineb.detune.setValueAtTime(0, audioCtx.currentTime);
+    sineb.detune.linearRampToValueAtTime(-1000, 21, audioCtx.currentTime);
+    sineb.type = "square";
+    sineb.connect(volume);
+    sineb.start();
+
+
+</script>
+
+
+
+  </body>
+</html>

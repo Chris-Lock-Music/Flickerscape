@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="refresh" content="10;test_css.4.html" />
+
+<style>
+
+
+body {
+  background-color: white;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+  background: white;
+
+}
+
+div:hover {
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: width 2s, height 2s, transform 2s, background 2s;
+}
+
+div2 {
+  width: 100px;
+  height: 100px;
+  background: white;
+
+}
+
+div2:hover {
+  width: 500px;
+  height: 350px;
+  transform: rotate(-360deg);
+  transform: skewZ(-60deg);
+  transform: skewX(-60deg);
+  background: black;
+  animation-name: example;
+  animation-duration: 0.4s;
+  transition: width 2s, height 2s, transform 2s, background 2s;
+}
+
+
+div3 {
+  width: 100px;
+  height: 100px;
+  background: white;
+
+}
+
+div3:hover {
+  width: 100px;
+  height: 150px;
+  transform: rotate(-720deg);
+  transform: skewZ(-30deg);
+  transform: skewX(-40deg);
+  background: black;
+  animation-name: example;
+  animation-duration: 0.4s;
+  transition: width 2s, height 1s, transform 1s, background 2s;
+}
+
+
+div4 {
+  width: 100px;
+  height: 100px;
+  background: white;
+
+}
+
+div4:hover {
+  width: 500px;
+  height: 70px;
+  transform: rotate(-720deg);
+  transform: skewZ(-20deg);
+  transform: skewX(-90deg);
+  background: black;
+  animation-name: example2;
+  animation-duration: 0.4s;
+  transition: width 2s, height 1s, transform 1s, background 2s;
+}
+
+
+@keyframes example {
+  0%   {background-color: white;}
+  25%  {background-color: black;}
+  50%  {background-color: white;}
+  100% {background-color: black;}
+}
+
+@keyframes example2 {
+  0%   {background-color:white; left:0px; top:0px;}
+  25%  {background-color:black; left:2000px; top:0px;}
+  50%  {background-color:white; left:2000px; top:2000px;}
+  75%  {background-color:black; left:0px; top:2000px;}
+  100% {background-color:white; left:0px; top:0px;}
+}
+
+
+p {
+    color: black;
+    transition: color 1.5s;
+    font-size: 40px;
+    text-align: center;
+    padding: 100px;
+}
+
+
+p:hover {
+    color: white;
+}
+
+
+p2 {
+    color: white;
+    transition: color 1.5s;
+    font-size: 20px;
+    text-align: center;
+    padding: 100px;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: white;
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-item-circle {
+  background-color: white;
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 75%;
+  width: 75%;
+  transition: width 1s, height 1s;
+}
+
+.button:hover {
+  background-color: darkred;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:focus {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  animation-name: example;
+  animation-duration: 0.4s;
+  width: 1px;
+  height: 1px;
+}
+
+</style>
+</head>
+
+
+
+<body>
+<div class="grid-container" >
+
+  <div2 class="grid-item" >
+  <div class="grid-container">
+  <div2 class="grid-item-circle"><a href="audio6.html" target="iframe_a" class="button"></a></div2>
+  <div4 class="grid-item"></div4>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div4 class="grid-item-circle"></div4>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"><a href="audio5.html" target="iframe_b" class="button"></a></div2>
+  <div4 class="grid-item"></div4>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div4 class="grid-item-circle"></div4>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"><a href="audio2.html" target="iframe_c" class="button"></a></div>
+  </div></div2>
+
+
+  <div2 class="grid-item-circle">
+  <div class="grid-container">
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div4 class="grid-item"></div4>
+  <div2 class="grid-item"><hr><hr><hr></div2>
+  <div class="grid-item"></div>
+  <div4 class="grid-item"></div4>
+  <div class="grid-item-circle"><a href="audio1.html" target="iframe_d" class="button"></a></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div4 class="grid-item"></div4>
+  <div2 class="grid-item-circle"></div2>
+  <div4 class="grid-item"></div4>
+  <div class="grid-item"></div>
+  <div4 class="grid-item-circle"></div4>
+  <div class="grid-item"></div>
+  <div4 class="grid-item-circle"></div4>
+  </div></div2>
+
+
+  <div2 class="grid-item">
+  <div class="grid-container">
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"><a href="audio10.html" target="iframe_e" class="button"></a></div2>
+  <div2 class="grid-item"></div2>
+  <div3 class="grid-item"></div3>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"></div>
+  <div3 class="grid-item-circle"></div3>
+  <div class="grid-item-circle"></div>
+  <div4 class="grid-item-circle"></div4>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div4 class="grid-item"></div4>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"><a href="audio2.html" target="iframe_a" class="button"></a></div>
+  <div class="grid-item-circle"></div>
+  </div></div2>
+
+
+  <div2 class="grid-item">
+  <div class="grid-container">
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"><a href="audio5.html" target="iframe_c" class="button"></a></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item-circle"></div>
+  <div3 class="grid-item"></div3>
+  <div class="grid-item"></div>
+  <div3 class="grid-item-circle"></div3>
+  <div class="grid-item"></div>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+  </div></div2>
+
+
+  <div2 class="grid-item-circle">
+  <div class="grid-container">
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"><a href="audio9.html" target="iframe_d" class="button"></a></div2>
+  <div3 class="grid-item-circle"></div3>
+  <div class="grid-item"></div>
+  <div4 class="grid-item"></div4>
+  <div3 class="grid-item-circle"></div3>
+  <div3 class="grid-item-circle"></div3>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div4 class="grid-item"></div4>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"></div>
+  <div4 class="grid-item-circle"></div4>
+  </div></div2>
+
+
+  <div2 class="grid-item">
+  <div class="grid-container">
+  <div2 class="grid-item"></div2>
+  <div4 class="grid-item-circle"></div4>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div3 class="grid-item-circle"></div3>
+  <div class="grid-item-circle"></div>
+  <div3 class="grid-item"></div3>
+  <div class="grid-item"></div>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div4 class="grid-item"></div4>
+  <div class="grid-item-circle"><a href="audio6.html" target="iframe_e" class="button"></a></div>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+</div></div2>
+
+
+  <div2 class="grid-item">
+  <div class="grid-container">
+  <div2 class="grid-item-circle"></div2>
+  <div3 class="grid-item"></div3>
+  <div4 class="grid-item-circle"></div4>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div3 class="grid-item-circle"></div3>
+  <div class="grid-item-circle"></div>
+  <div3 class="grid-item"></div3>
+  <div3 class="grid-item-circle"></div3>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div4 class="grid-item"></div4>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+</div></div2>
+
+
+  <div2 class="grid-item-circle">
+  <div class="grid-container">
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div3 class="grid-item"></div3>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"></div>
+  <div3 class="grid-item-circle"></div3>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+</div></div2>
+
+
+  <div2 class="grid-item">
+  <div class="grid-container">
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-cirlce"></div2>
+  <div2 class="grid-item"></div2>
+  <div3 class="grid-item-circle"></div3>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+  <div3 class="grid-item"></div3>
+  <div4 class="grid-item-circle"></div4>
+  <div2 class="grid-item-circle"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item"></div2>
+  <div2 class="grid-item-circle"></div2>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div4 class="grid-item-circle"></div4>
+  <div class="grid-item"></div>
+  <div class="grid-item-circle"></div>
+</div></div2>
+</div>
+
+<div4></div4>
+
+<audio autoplay>
+  <source src="sound8.wav" type="audio/wav">
+</audio>
+<!--iframes taken from W3schools.com-->
+<iframe src="demo_iframe.htm" name="iframe_a" height="0px" width="0px" frameborder="0" title="Iframe Example"></iframe>
+
+<iframe src="demo_iframe.htm" name="iframe_b" height="0px" width="0px" frameborder="0" title="Iframe Example"></iframe>
+
+<iframe src="demo_iframe.htm" name="iframe_c" height="0px" width="0px" frameborder="0" title="Iframe Example"></iframe>
+
+<iframe src="demo_iframe.htm" name="iframe_d" height="0px" width="0px" frameborder="0" title="Iframe Example"></iframe>
+
+<iframe src="demo_iframe.htm" name="iframe_e" height="0px" width="0px" frameborder="0" title="Iframe Example"></iframe>
+
+</body>

@@ -1,0 +1,53 @@
+<!doctype html>
+
+<head>
+
+<title>audio3</title>
+
+<link rel="stylesheet" href="/Style.css" type="text/css" media="screen" />
+
+</head>
+    <body>
+        <script>
+            var audioCtx = new (window.AudioContext || window.webkitAudioContext)
+
+
+            var volume = audioCtx.createGain();
+            volume.gain.setValueAtTime(0, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0.2, 0.3, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0, 0.4, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0.2, 0.5, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0, 0.6, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0.2, 0.7, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0, 0.8, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0.2, 0.9, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0, 1, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0.2, 1.1, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0, 1.2, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0.2, 2.3, audioCtx.currentTime);
+            volume.gain.linearRampToValueAtTime(0, 3.4, audioCtx.currentTime);
+            volume.connect(audioCtx.destination);
+
+
+            var oscillator = audioCtx.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(220, 0);
+            oscillator.frequency.linearRampToValueAtTime(250, 2, audioCtx.currentTime);
+            oscillator.frequency.linearRampToValueAtTime(220, 3, audioCtx.currentTime);
+            oscillator.detune.setValueAtTime(100, audioCtx.currentTime);
+            oscillator.connect(volume);
+            oscillator.start();
+
+
+            var oscillator1 = audioCtx.createOscillator();
+            oscillator1.type = 'sine';
+            oscillator1.frequency.setValueAtTime(105, 0);
+            oscillator1.frequency.linearRampToValueAtTime(220, 3, audioCtx.currentTime);
+            oscillator1.frequency.linearRampToValueAtTime(880, 4, audioCtx.currentTime);
+            oscillator1.detune.setValueAtTime(100, audioCtx.currentTime);
+            oscillator1.connect(volume);
+            oscillator1.start();
+
+        </script>
+    </body>
+</html>
